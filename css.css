@@ -1,16 +1,23 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 button{
     background-color: #fff;
     padding: 2px;
+    border: 1px solid #0FABBC;
+    color: #0FABBC;
 }
 
+input{
+    border: 1px solid #0FABBC;
+    padding: 10px;
+}
 
 #chat{
-    padding: 0% 25%;
+    padding: 0% 10%;
     height: 90vh;
     display: flex;
     flex-flow: column;
@@ -21,35 +28,80 @@ button{
 #chat iframe{
     width: 100%;
     height: 50%;   
-    border: 1px solid black;
+    border: 1px solid #0FABBC;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#chat span{
+    font-size: 25px;
+    max-width: 350px;
+    color: #0FABBC;
+    font-weight: 900;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .inputSection{
-   
     min-width: 100%;
     display: flex;
 }
 
 .inputSection input#type{
     width: 100%;  
-    border: 1px solid black;
+    border: 1px solid #0FABBC;
+    border-radius: 0px 0px 0px 20px;
 }
 
 .message{
     display: flex;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
+    background-color: #F3FAFF;
+    border: 1px solid #0FABBC;
+    border-radius: 15px;
+    padding:5px;
+    margin-bottom: 5px;
+    font-size: 15px;
 }
 
 .message .sender{
     min-width: 80px;
+    color: #FA163F;
+
 }
 
 .loginDiv{
     display: flex;
     justify-content: center;
     margin-top: 15%;
+
 }
 
 .loginDiv input{
     min-width: 50%;
     max-width: 80%;
+
+}
+
+.send{
+    width: 60px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.messageText{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.date{
+    position: relative;
+    float: right;
+    font-size: 7pt;
+}
+
+.messageWrap{
+    margin-bottom: 30px;
+
 }
