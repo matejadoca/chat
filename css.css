@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: #fff;
+    padding: 2px;
+}
+
+
+#chat{
+    padding: 0% 25%;
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat iframe{
+    width: 100%;
+    height: 50%;   
+    border: 1px solid black;
+}
+
+.inputSection{
+   
+    min-width: 100%;
+    display: flex;
+}
+
+.inputSection input#type{
+    width: 100%;  
+    border: 1px solid black;
+}
+
+.message{
+    display: flex;
+}
+
+.message .sender{
+    min-width: 80px;
+}
+
+.loginDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.loginDiv input{
+    min-width: 50%;
+    max-width: 80%;
+}
