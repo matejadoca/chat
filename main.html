@@ -22,7 +22,30 @@
     <script type="text/javascript">
        
          window.scrollTo(0, document.body.scrollHeight);
+         var counter = 0;
+        function iterator () {
 
+         
+               setTimeout(function() {
+                    fetch('https://630d460053a833c5343e0e61.mockapi.io/chat')
+                    .then(res => res.json())
+                    .then(data =>{
+                        let allMsg = document.querySelectorAll('.message');
+                        if (allMsg.length > data.length) {
+                           getMessages(); 
+                        }
+                        
+                    }).catch(error=>{});
+                    
+                    iterator();
+             }, 3000);
+             
+
+        }
+       iterator();
+
+      
+         
     </script>
 </body>
 
