@@ -31,8 +31,9 @@
                     .then(res => res.json())
                     .then(data =>{
                         let allMsg = document.querySelectorAll('.message');
-                        if (allMsg.length > data.length) {
-                           getMessages(); 
+                        if (allMsg.length < data.length) {
+                           getUnshownMessage(allMsg.length, data.length, data);
+                           scrollBtm();
                         }
                         
                     }).catch(error=>{});

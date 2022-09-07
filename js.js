@@ -7,6 +7,8 @@ let sendBtn = document.querySelector('.send');
 let session = new Session();
 session_id = session.getSession();
 
+
+
 function scrollBtm() {
 	setTimeout(function () {
 		if (iframe) {
@@ -104,6 +106,36 @@ if (loginInp) {
 				}
 		});
 	});
+}
+
+function getUnshownMessage(msgs, datal, data) {
+	let unshown = parseInt(datal) - parseInt(msgs);
+	for(let i = parseInt(msgs); i < datal;i++){
+
+
+		let chat = document.querySelector('.chatRoom');
+
+		msg = document.createElement('div');
+		msg.className = 'message';
+
+		sender = document.createElement('div');
+		sender.className = 'sender';
+		sender.innerText = data[i].sender + ':';
+
+		messageText = document.createElement('div');
+		messageText.className = 'messageText';
+		messageText.innerText = data[i].message;
+
+		
+		msg.appendChild(sender);
+		msg.appendChild(messageText);
+
+		chat.appendChild(msg);
+
+		
+	
+	}
+
 }
 getMessages();
 	
