@@ -13,6 +13,7 @@ function scrollBtm() {
 	setTimeout(function () {
 		if (iframe) {
 			iframe.contentWindow.scrollTo(0, iframe.contentDocument.body.scrollHeight);
+			
 		}
 	
 	}, 800)
@@ -153,10 +154,10 @@ function getUnshownMessage(msgs, datal, data) {
 
 		chat.appendChild(messageWrap);
 
-		
+
 	
 	}
-
+	
 }
 function getDate() {
 	const d = new Date().getTime();

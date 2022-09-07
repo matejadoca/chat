@@ -34,7 +34,7 @@
                         let allMsg = document.querySelectorAll('.message');
                         if (allMsg.length < data.length) {
                            getUnshownMessage(allMsg.length, data.length, data);
-                           scrollBtm();
+                           window.scrollTo(0, document.body.scrollHeight);
                         }
                         
                     }).catch(error=>{});
